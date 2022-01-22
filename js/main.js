@@ -674,6 +674,7 @@ else if(selectbox.value === "b-3"){
             }else{
                 //次の問題へ
                 a++;
+              alert(cn);
               Quizset();
             }
   
