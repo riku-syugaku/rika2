@@ -657,9 +657,9 @@ else if(selectbox.value === "b-3"){
   
             choice1.removeEventListener('click',event);
   
-              if(a > 18 ){
+              if(a > 28 ){
                 modal.classList.remove('hidden');
-                count.textContent = ` 得点は ${cn} /20 です。`;
+                count.textContent = ` 得点は ${cn} /30 です。`;
               //   var Finish   = new SpeechSynthesisUtterance();
               // Finish.text  = 'Great!!Good job!!';
               // Finish.rate  = 1; // 読み上げ速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5, )
