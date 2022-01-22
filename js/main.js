@@ -674,7 +674,7 @@ else if(selectbox.value === "b-3"){
             }else{
                 //次の問題へ
                 a++;
-              alert(cn);
+             
               Quizset();
             }
   
@@ -684,7 +684,7 @@ else if(selectbox.value === "b-3"){
             modal2.classList.remove('hidden');
   
           answer.textContent = ` "${question.textContent}" は「${item1.textContent}」です。`;
-          a++;
+          //a++;
   
           okay.addEventListener('click',()=>{
             modal2.classList.add('hidden');
