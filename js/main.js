@@ -24,7 +24,7 @@ const quizSet = [
   {q:'軟体動物にあるのは？',c:['外とう膜','外骨格']},
   {q:'葉の裏側にあるのが',c:['師管','道管']},
   {q:'ヨウ素液はデンプンに反応して',c:['青紫色','赤褐色']},
-  {q:'単子葉類の葉脈は？',c:['平行脈','網状脈']},
+  {q:'単子葉類の葉脈は？',c:['網状脈','平行脈']},
   {q:'子房は成長して何になるか？',c:['果実','種子']},
   {q:'昼間に植物が全体として放出するのが',c:['酸素','二酸化炭素']},
   {q:'両生類なのが',c:['イモリ','ヤモリ']},
@@ -100,8 +100,8 @@ const Bio2 = [
   {q:'大静脈に流れるのが',c:['静脈血','動脈血']},
   {q:'肺から血液が流れてくるのが',c:['左心房','右心房']},
   {q:'全身から血液が流れてくるのが',c:['右心房','左心房']},
-  {q:'肺に血液を送り出すのが',c:['左心室','右心室']},
-  {q:'全身に血液を送り出すのが',c:['右心室','左心室']},
+  {q:'肺に血液を送り出すのが',c:['右心室','左心室']},
+  {q:'全身に血液を送り出すのが',c:['左心室','右心室']},
   {q:'入ってくる光を屈折させるのが',c:['レンズ','虹彩']},
   {q:'空気の振動を捉える部分が',c:['鼓膜','うずまき管']},
   {q:'脳は',c:['中枢神経','末しょう神経']},
@@ -401,9 +401,9 @@ const Che1 = [
   {q:'	エタノールは	',c:['	単体	','	混合物	']},
   {q:'	フェノールフタレイン溶液は酸性で	',c:['	無色	','	赤色	']},
   {q:'	水素の集め方は	',c:['	水上置換法	','	下方置換法	']},
-  {q:'	水から氷で体積は	',c:['	小さくなる	','	大きくなる	']},
+  {q:'	水から氷で体積は	',c:['	大きくなる	','	小さくなる	']},
   {q:'	卵が腐ったような匂いなのが	',c:['	硫化水素	','	塩化水素	']},
-  {q:'	酸素は水に	',c:['溶けにくい	','	溶けやすい	']},
+  {q:'	酸素は水に	',c:['	溶けにくい	','	溶けやすい	']},
   {q:'	卵の殻に食酢で発生するのが	',c:['	二酸化炭素	','	酸素	']},
   {q:'	アンモニアは空気より密度が	',c:['	小さい	','	大きい	']},
   {q:'	空気は	',c:['	混合物	','	化合物	']},
@@ -657,16 +657,10 @@ else if(selectbox.value === "b-3"){
   
             choice1.removeEventListener('click',event);
   
-              if(a > 28 ){
+              if(a > 18 ){
                 modal.classList.remove('hidden');
-                count.textContent = ` 得点は ${cn} /30 です。`;
-              //   var Finish   = new SpeechSynthesisUtterance();
-              // Finish.text  = 'Great!!Good job!!';
-              // Finish.rate  = 1; // 読み上げ速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5, )
-              // Finish.pitch = 1;// 声の高さ 0-2 初期値:1(0で女性の声) 
-              // Finish.lang  = 'en-US'; //(日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
-              // speechSynthesis.speak(Finish);
-    
+                count.textContent = ` 得点は ${cn} /20 です。`;
+         
                 close.addEventListener('click',()=>{
                   location.reload();
               })
@@ -674,7 +668,6 @@ else if(selectbox.value === "b-3"){
             }else{
                 //次の問題へ
                 a++;
-             
               Quizset();
             }
   
@@ -684,19 +677,18 @@ else if(selectbox.value === "b-3"){
             modal2.classList.remove('hidden');
   
           answer.textContent = ` "${question.textContent}" は「${item1.textContent}」です。`;
-          //a++;
+          a++;
   
           okay.addEventListener('click',()=>{
             modal2.classList.add('hidden');
             choice1.removeEventListener('click',event);
             
-            Quizset();
           });
        
       //     function change(){a=0}
       //  change();
 
-      //     Quizset();
+       Quizset();
 
           }
         };
